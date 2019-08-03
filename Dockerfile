@@ -5,7 +5,7 @@
 # ----------------------------------
 FROM        openjdk:8-jre-slim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+MAINTAINER Michael Parker <parker@pterodactyl.io>
 
 RUN apt-get update -y \
  && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 \
@@ -16,9 +16,7 @@ ENV         USER=container HOME=/home/container
 
 WORKDIR     /home/container
 
-RUN echo $'grant {\n\
-  permission java.security.AllPermission;\n\
-  };' >> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/java.policy
+ADD https://raw.githubusercontent.com/tterrag1098/K9/master/mcbot.policy /docker-java-home/jre/lib/security/java.policy
 
 COPY        ./entrypoint.sh /entrypoint.sh
 
