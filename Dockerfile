@@ -18,7 +18,7 @@ WORKDIR     /home/container
 
 RUN echo $'grant {\n\
   permission java.security.AllPermission;\n\
-  };' >> /docker-java-home/jre/lib/security/java.policy
+  };' >> /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/java.policy
 
 COPY        ./entrypoint.sh /entrypoint.sh
 
