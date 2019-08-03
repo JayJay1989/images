@@ -16,7 +16,9 @@ ENV         USER=container HOME=/home/container
 
 WORKDIR     /home/container
 
-RUN printf 'grant {\n  permission java.security.AllPermission;\n};' >> /docker-java-home/jre/lib/security/java.policy
+RUN echo $'grant {\n\
+  permission java.security.AllPermission;\n\
+  };' >> /docker-java-home/jre/lib/security/java.policy
 
 COPY        ./entrypoint.sh /entrypoint.sh
 
