@@ -3,7 +3,7 @@
 # Environment: Java-app (glibc support)
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        openjdk:8-jre-slim
+FROM        openjdk:8-jre-stretch
 
 MAINTAINER Michael Parker <parker@pterodactyl.io>
 
