@@ -12,6 +12,7 @@ RUN apt-get update -y \
  && useradd -d /home/container -m container
 
 ADD https://raw.githubusercontent.com/tterrag1098/K9/master/mcbot.policy /docker-java-home/jre/lib/security/java.policy
+RUN cat /docker-java-home/jre/lib/security/java.policy
 
 USER        container
 ENV         USER=container HOME=/home/container
