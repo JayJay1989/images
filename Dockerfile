@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/runtime-deps:2.1-alpine3.9
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 
 MAINTAINER Jonas Lateur <jonas@lateur.pro>
 
