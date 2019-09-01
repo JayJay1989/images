@@ -15,10 +15,6 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-COPY        ./java.policy $HOME/
-COPY        ./java.policy $WORKDIR/.java.policy
-COPY        ./java.policy /docker-java-home/jre/lib/security/java.policy
-
 COPY        ./entrypoint.sh /entrypoint.sh
 
 CMD         ["/bin/bash", "/entrypoint.sh"]
