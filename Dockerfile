@@ -2,7 +2,7 @@ FROM		mcr.microsoft.com/dotnet/core/sdk:2.1-stretch
 
 MAINTAINER	Jonas Lateur <jonas@lateur.pro>
 
-RUN			apt-get update -y &&  apt-get install -y tar iproute && useradd -d /home/container -m container
+RUN			apt-get update -y &&  apt-get install -y tar iproute tzdata && useradd -d /home/container -m container
 
 USER        container
 ENV         USER=container HOME=/home/container
