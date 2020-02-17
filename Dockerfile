@@ -2,7 +2,7 @@ FROM		    mcr.microsoft.com/dotnet/core/sdk:3.1-buster
 
 MAINTAINER	Jonas Lateur <jonas@lateur.pro>
 
-RUN			    apt-get update -y &&  apt-get install -y tar iproute tzdata && useradd -d /home/container -m container
+RUN			    apt-get update -y &&  apt-get install -y tar iproute2 tzdata && useradd -d /home/container -m container
 ENV         TZ=Europe/Amsterdam
 
 USER        container
