@@ -5,9 +5,9 @@
 # ----------------------------------
 FROM        node:8-alpine
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
+LABEL       author="Jonas Lateur" maintainer="jonas@lateur.pro"
 
-RUN         apk add --no-cache --update libc6-compat \
+RUN         apk add --no-cache --update libc6-compat boost-dev openssl-dev \
             && adduser -D -h /home/container container
 
 USER        container
