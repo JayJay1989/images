@@ -4,7 +4,7 @@
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
 
-FROM        openjdk:8-jre-slim
+FROM        openjdk:11.0.6-jre-slim
 
 LABEL       author="JayJay1989BE" maintainer="jonas@lateur.pro"
 
