@@ -14,7 +14,9 @@ RUN apt-get update -y \
  && usermod -aG sudo container
 
 USER        container
-ENV         USER=container HOME=/home/container
+ENV         HOME=/home/container
+ENV 		LOGNAME=container
+ENV 		USER=container 
 
 WORKDIR     /home/container
 
