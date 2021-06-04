@@ -3,7 +3,7 @@
 # Environment: Java (glibc support)
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        openjdk:16-jre-slim
+FROM        openjdk:16-jdk-alpine
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
